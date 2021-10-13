@@ -1,11 +1,12 @@
-import { Link } from "gatsby"
 import * as React from "react"
+import NavBar from "../components/navbar"
 
 const IndexPage = () => (
   <div>
-    <h2>I will be better programmer in next 6 months</h2>
-    <Link to="/about">Learn more on me</Link>
-    <p>Consistency beats the talent</p>
+    <NavBar pageTitle="Homepage">
+      <h2>I will be better programmer in next 6 months</h2>
+      <p>Consistency beats the talent</p>
+    </NavBar>
   </div>
 )
 
