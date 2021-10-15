@@ -1,11 +1,12 @@
-nav ul{
-    list-style: none;
-    display: flex;
-    gap: 20px;
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-
-
-.links{
-    color: teal;
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
 }
+
