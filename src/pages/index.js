@@ -1,14 +1,8 @@
 import * as React from "react"
-import NavBar from "../components/navbar"
+import Maintenance from "./maintenance"
+import "../styles/global.scss"
+import "normalize.css"
 
-const IndexPage = () => (
-  <div>
-    <NavBar pageTitle="Homepage"></NavBar>
-    <h2>I will be better programmer in next 6 months</h2>
-    <p>Consistency beats the talent</p>
-  </div>
-)
-
-
+const IndexPage = () => <Maintenance />
 
 export default IndexPage
