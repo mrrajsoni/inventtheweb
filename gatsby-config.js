@@ -3,7 +3,26 @@ module.exports = {
     title: `A freelance Frontend Developer from Mumbai`,
     description: `Superfast E-commerce development that generate the sales.`,
     author: `Raj Soni`,
-    siteUrl: `https://inventthewebmain.gatsbyjs.io/`,
+    siteUrl: `https://inventtheweb.com`,
+    menuLinks: [
+      {
+        name: "Projects",
+        link: "/project",
+      },
+      {
+        name: "About",
+        link: "/about",
+      },
+      {
+        name: "Contact",
+        link: "/project",
+      },
+
+      {
+        name: "Projects",
+        link: "/project",
+      },
+    ],
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -11,8 +30,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        name: `blog`,
+        path: `${__dirname}/blog`,
       },
     },
     `gatsby-transformer-sharp`,
@@ -29,6 +48,12 @@ module.exports = {
         // theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/images/gatsbyjs-icon.png`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        implementation: require("sass"),
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
