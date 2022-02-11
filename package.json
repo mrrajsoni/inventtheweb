@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Raj Soni <mathews.kyle@gmail.com>",
   "dependencies": {
+    "classnames": "^2.3.1",
     "gatsby": "^3.13.1",
     "gatsby-plugin-google-gtag": "^4.6.0",
     "gatsby-plugin-image": "^1.14.1",
