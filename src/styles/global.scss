@@ -1,7 +1,27 @@
 @import "../styles/hamburgers/hamburgers.scss";
 
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
 img {
   max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  max-width: 200px;
 }
 
 section {

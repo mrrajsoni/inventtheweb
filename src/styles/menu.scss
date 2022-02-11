@@ -1,0 +1,92 @@
+.menu-container {
+  position: fixed;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #e8e8e8;
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility 0s linear 0.3s, opacity 0.3s linear;
+  -webkit-transition: visibility 0s linear 0.3s, opacity 0.3s linear;
+  -moz-transition: visibility 0s linear 0.3s, opacity 0.3s linear;
+  -ms-transition: visibility 0s linear 0.3s, opacity 0.3s linear;
+  -o-transition: visibility 0s linear 0.3s, opacity 0.3s linear;
+  > ul {
+    height: 100%;
+    padding: 0;
+    display: flex;
+    margin: 0;
+    list-style: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    > li {
+      flex: 1 1 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      > a {
+        font-size: 60px;
+        flex: 1;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.menu-container.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.hamburger {
+  position: relative;
+  z-index: 2;
+}
+
+//Menu border for devices bigger than mobile
+@media (min-width: 768px) {
+  .menu-li:first-child::after {
+    position: absolute;
+    content: "";
+    right: -1px;
+    height: 100%;
+    width: 1px;
+    background: red;
+  }
+  .menu-li:nth-of-type(2)::before {
+    position: absolute;
+    content: "";
+    bottom: -1px;
+    height: 1px;
+    width: 100%;
+    background: red;
+  }
+  .menu-li:nth-of-type(3)::after {
+    position: absolute;
+    content: "";
+    top: 0px;
+    height: 1px;
+    width: 100%;
+    background: red;
+  }
+  .menu-li:last-child::before {
+    position: absolute;
+    content: "";
+    left: 0px;
+    height: 100%;
+    width: 1px;
+    background: red;
+  }
+}
+
+// Mobile CSS
+@media (max-width: 767px) {
+  .menu-container > ul > li {
+    flex: 1 1 100%;
+    border-bottom: 1px solid rgb(78, 78, 78);
+    a {
+      font-size: 26px;
+    }
+  }
+}
