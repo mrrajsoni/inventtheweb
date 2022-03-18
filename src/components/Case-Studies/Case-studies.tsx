@@ -2,6 +2,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import * as React from "react"
 import Button from "../Button"
 
+
 const CaseStudy = () => {
 
   const casestudyquery = useStaticQuery(graphql`
@@ -27,7 +28,7 @@ const CaseStudy = () => {
   return (
     <>
       {casestudyquery.allMdx.nodes.map((node) => (
-        <div key={node.id} className={`case-study-container`}>
+        <div key={node.id} className={`case-study-container flex `}>
           <div className={`case-study-left`}>
             <div className={`case-study-text`}>
               <p className={`case-study-subtitle`}>{node.frontmatter.subtitle}</p>
@@ -37,7 +38,7 @@ const CaseStudy = () => {
             </div>
           </div>
           <div className={`case-study-right ${node.frontmatter.classname}`}>
-            <img src={node.frontmatter.imageurl} alt={node.frontmatter.imagealt} />
+            <img className={`case-study-thumbnail`} src={node.frontmatter.imageurl} alt={node.frontmatter.imagealt} />
           </div>
         </div>
       ))}
