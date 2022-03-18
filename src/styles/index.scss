@@ -1,12 +1,11 @@
 @import url("../styles/variables.scss");
-@import url("../styles/global.scss");
 
 .homepage-banner {
+  height: 85vh;
   display: flex;
-  padding: 0 20px;
   max-width: var(--maxWidth);
   margin: auto;
-  padding-bottom: var(--70);
+  padding: var(--100) var(--20);
 
   .homepage-banner-right,
   .homepage-banner-left {
@@ -46,7 +45,7 @@
 
 .case-study-container {
   display: flex;
-  box-shadow: 0 30px 60px rgb(0 0 0 / 10%);
+  box-shadow: 0 30px 60px rgb(0 0 0 / 21%);
   margin-bottom: var(--100);
 }
 
@@ -67,6 +66,7 @@
   font-size: 42px;
   margin: 0;
   font-family: "Nibpro-bold";
+  margin-bottom: 15px;
 }
 
 .case-study-description {
@@ -77,6 +77,7 @@
   margin-top: 0;
   display: flex;
   align-items: center;
+  margin-bottom: var(--20);
 }
 
 .case-study-subtitle::before {
@@ -86,4 +87,42 @@
   height: 2px;
   background: #333;
   margin-right: 10px;
+}
+
+/** Tab styling **/
+
+@media (max-width: 1023px) and (min-width: 768px) {
+}
+
+/** Mobile styling **/
+
+@media (max-width: 767px) {
+  .homepage-banner {
+    flex-direction: column;
+    margin-top: var(--30);
+    .homepage-banner-title {
+      font-size: 44px;
+    }
+  }
+
+  .case-study-container {
+    flex-direction: column;
+
+    .case-study-title {
+      font-size: 32px;
+    }
+
+    .case-study-description {
+      font-size: 18px;
+    }
+
+    .case-study-right {
+      max-height: 350px;
+      display: flex;
+
+      img {
+        object-fit: cover;
+      }
+    }
+  }
 }

@@ -1,11 +1,13 @@
 @import "../styles/hamburgers/hamburgers.scss";
 @import "../styles/typography.scss";
 @import url("../styles/variables.scss");
+@import url("../styles/scrollStyle.scss");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
-
-/* Document
-   ========================================================================== */
 
 /**
  * 1. Correct the line height in all browsers.
@@ -366,7 +368,7 @@ h5,
 h6,
 a {
   font-family: "Nibpro";
-  margin-bottom: 20px;
+  margin-bottom: var(--20);
 }
 
 button {
@@ -374,14 +376,14 @@ button {
   padding: 0;
   margin: 0;
   border: none;
-  border-radius: 50px;
+  border-radius: var(--50);
   cursor: pointer;
-  margin-top: 20px;
+  margin-top: var(--30);
 
   > .button-span {
     display: block;
     padding: 15px 40px;
-    border-radius: 50px;
+    border-radius: var(--50);
     color: var(--white);
     font-size: 22px;
     background: var(--primaryBlue);
@@ -391,6 +393,10 @@ button {
     -ms-transform: translate(-4px, -4px);
     -o-transform: translate(-4px, -4px);
     transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+    -webkit-border-radius: var(--50);
+    -moz-border-radius: var(--50);
+    -ms-border-radius: var(--50);
+    -o-border-radius: var(--50);
   }
 }
 
@@ -402,6 +408,10 @@ button:hover {
     -ms-transform: translate(-8px, -8px);
     -o-transform: translate(-8px, -8px);
   }
+}
+
+div {
+  width: 100%;
 }
 
 img {
@@ -421,7 +431,7 @@ header {
 }
 
 .logo {
-  max-width: 200px;
+  max-width: 150px;
 }
 
 .maintenanceGif {
@@ -439,10 +449,25 @@ header {
   font-weight: bold;
   font-size: 22px;
   letter-spacing: 3px;
+  margin-bottom: var(--20);
+  display: block;
 }
 
 .margin-container {
   max-width: var(--maxWidth);
   margin: auto;
   padding: 0 20px;
+}
+
+/** Mobile styling **/
+
+@media (max-width: 767px) {
+  .section-title {
+    font-size: 34px;
+  }
+
+  button > .button-span {
+    padding: 10px 32px;
+    font-size: 18px;
+  }
 }
