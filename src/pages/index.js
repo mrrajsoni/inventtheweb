@@ -4,14 +4,17 @@ import "../styles/index.scss"
 import Header from "../components/Header/header"
 import Button from "../components/Button"
 import CaseStudy from "../components/Case-Studies/Case-studies"
-import BlogPage from "./blog"
+import Footer from "../components/Footer/Footer"
+import "../scripts/scroll.js"
 
 const IndexPage = () => {
   return (
     <>
       <Header />
-      <section className={`homepage-banner`}>
-        <div className={`homepage-banner-left`}>
+      <section className={`homepage-banner cd-section visible`}>
+        <div
+          className={`homepage-banner-left flex flex-col justify-center items-start `}
+        >
           <h1
             title="Superfast E-commerce Website Development"
             className={`homepage-banner-title`}
@@ -27,7 +30,7 @@ const IndexPage = () => {
         </div>
         <div className={`homepage-banner-right`}></div>
       </section>
-      <section className={`case-study`}>
+      <section className={`case-study cd-section`}>
         <div className={`margin-container`}>
           <span className={`section-mini-subtitle`}>WORK</span>
           <h2 className={`section-title`}>
@@ -36,6 +39,7 @@ const IndexPage = () => {
           <CaseStudy />
         </div>
       </section>
+      <Footer />
     </>
   )
 }
