@@ -17,6 +17,7 @@ const CaseStudy = () => {
           classname
           imageurl
           imagealt
+          link
         }
         id
       body
@@ -34,7 +35,7 @@ const CaseStudy = () => {
               <p className={`case-study-subtitle`}>{node.frontmatter.subtitle}</p>
               <h3 className={`case-study-title`}>{node.frontmatter.title}</h3>
               <p className={`case-study-description`}>{node.frontmatter.description}</p>
-              <Button name={`View project`} link={undefined} />
+              <Button newTab={true} name={`View project`} link={node.frontmatter.link} />
             </div>
           </div>
           <div className={`case-study-right ${node.frontmatter.classname}`}>
