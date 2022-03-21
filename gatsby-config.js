@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `💻 E-commerce Website Developer in Mumbai`,
-    description: `A superfast, scalable, solid E-commerce development that generate the sales.`,
+    title: `A freelance Frontend Developer from Mumbai`,
+    description: `A superfast E-commerce development that generate the sales.`,
     author: `Raj Soni`,
     siteUrl: `https://inventtheweb.com`,
     menuLinks: [
@@ -45,7 +45,7 @@ module.exports = {
         start_url: `/`,
         background_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/ITW-favicon.png`, // This path is relative to the root of the site.
+        icon: `src/images/gatsbyjs-icon.png`, // This path is relative to the root of the site.
       },
     },
     {
