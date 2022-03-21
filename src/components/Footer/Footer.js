@@ -1,24 +1,7 @@
 import * as React from "react"
 import "../../styles/footer.scss"
-import Github from "../../images/svg/github.svg"
-import Linkedin from "../../images/svg/linkedin.svg"
-import { Link } from "gatsby"
-import Lottie from "lottie-web"
 
 const Footer = () => {
-  let animationContainer = React.createRef()
-  React.useEffect(() => {
-    const anim = Lottie.loadAnimation({
-      container: animationContainer.current, // the dom element that will contain the animation
-      renderer: "svg",
-      loop: true,
-      autoplay: true,
-      path: "../../images/animations/github.json",
-    })
-
-    return anim.destroy()
-  }, [])
-
   const getYear = () => {
     const d = new Date()
     const currentYear = d.getFullYear()
@@ -27,23 +10,27 @@ const Footer = () => {
 
   const SocialIcons = () => {
     return (
-      <section className="social-icons-container">
-        <Link to="https://github.com/mrrajsoni">
-          <span ref={animationContainer}></span>
-        </Link>
-        <Link to="https://github.com/mrrajsoni">
-          <img src={Linkedin} alt="LinkedIn icon" />
-        </Link>
+      <section className="social-icons-container flex flex-col gap-5 items-end">
+        <a href="https://github.com/mrrajsoni" target="_blank" rel="noreferrer">
+          Github
+        </a>
+        <a
+          href="https://www.linkedin.com/in/raj-soni1996/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          LinkedIn
+        </a>
       </section>
     )
   }
 
   const EmailInfo = () => {
-    return <Link to="mailto:raj@inventtheweb.com">raj@inventtheweb.com</Link>
+    return <a href="mailto:raj@inventtheweb.com">raj@inventtheweb.com</a>
   }
 
   const ContactInfo = () => {
-    return <Link to="tel:+91-8097753677">+91-8097753677</Link>
+    return <a href="tel:+91-8097753677">+91-8097753677</a>
   }
   const Copyright = () => {
     return (
@@ -54,10 +41,16 @@ const Footer = () => {
   }
   return (
     <footer>
-      <section className={`footer-container flex justify-around items-center `}>
-        <EmailInfo />
-        <SocialIcons />
-        <ContactInfo />
+      <section
+        className={`footer-container margin-container flex justify-around flex-col md:items-center md:flex-row `}
+      >
+        <div className="flex flex-col gap-5 mb-5 md:mb-0 items-start border-right">
+          <EmailInfo />
+          <ContactInfo />
+        </div>
+        <div className="">
+          <SocialIcons />
+        </div>
       </section>
       <Copyright />
     </footer>
