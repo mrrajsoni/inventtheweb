@@ -1,7 +1,6 @@
 @import "../styles/hamburgers/hamburgers.scss";
 @import "../styles/typography.scss";
 @import url("../styles/variables.scss");
-@import url("../styles/scrollStyle.scss");
 
 @tailwind base;
 @tailwind components;
@@ -360,6 +359,12 @@ span {
   font-size: 16px;
 }
 
+body {
+  &.no-scroll {
+    overflow-y: hidden;
+  }
+}
+
 h1,
 h2,
 h3,
@@ -373,11 +378,7 @@ a {
 
 button {
   background: #000;
-  padding: 0;
-  margin: 0;
-  border: none;
   border-radius: var(--50);
-  cursor: pointer;
   margin-top: var(--30);
 
   > .button-span {

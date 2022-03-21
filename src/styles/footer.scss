@@ -5,7 +5,8 @@ footer {
   color: var(--footerText);
 
   .footer-container {
-    padding: var(--50) 0;
+    padding-top: var(--125);
+    padding-bottom: var(--50);
     font-size: 22px;
   }
   a {
@@ -23,11 +24,14 @@ footer {
   }
 
   .social-icons-container {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
     img {
-      width: 44px;
+      width: 22px;
     }
+  }
+}
+
+@media (min-width: 768px) {
+  .border-right {
+    border-right: 2px dashed;
   }
 }
