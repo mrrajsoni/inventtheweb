@@ -13,6 +13,8 @@ const Menu = () => {
     <nav className="nav-bar">
       <button
         onClick={event => {
+          let body = document.getElementsByTagName("body")
+          body[0].classList.toggle("no-scroll")
           event.currentTarget.classList.toggle("is-active")
           menuOpen()
         }}

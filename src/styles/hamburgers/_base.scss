@@ -9,7 +9,6 @@
   transition-duration: 0.15s;
   transition-timing-function: linear;
 
-  // Normalize (<button>)
   font: inherit;
   color: inherit;
   text-transform: none;
@@ -53,7 +52,7 @@
 .hamburger-inner {
   display: block;
   top: 50%;
-  margin-top: $hamburger-layer-height / -2;
+  margin-top: calc($hamburger-layer-height / -2);
 
   &,
   &::before,

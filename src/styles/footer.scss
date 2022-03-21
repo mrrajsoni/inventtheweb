@@ -1,0 +1,37 @@
+@import url("../styles/variables.scss");
+
+footer {
+  background-color: var(--blackBg);
+  color: var(--footerText);
+
+  .footer-container {
+    padding-top: var(--125);
+    padding-bottom: var(--50);
+    font-size: 22px;
+  }
+  a {
+    margin: 0;
+  }
+
+  .copyright-container {
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid var(--grayBorder);
+  }
+
+  .logo {
+    margin: auto;
+  }
+
+  .social-icons-container {
+    img {
+      width: 22px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .border-right {
+    border-right: 2px dashed;
+  }
+}
