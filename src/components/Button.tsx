@@ -1,9 +1,16 @@
 import * as React from "react"
 
-const Button = ({ name, link }: { name: string, link: string }) => {
+interface ButtonProps {
+  name: string,
+  link: string,
+  newTab?: boolean
+}
 
+const Button = (props: ButtonProps) => {
+
+  const { name, link, newTab } = props;
   const onButtonClick = () => {
-    window.location.href = link
+    newTab ? window.open(link, "_blank") : window.location.href = link
   }
   return (
     <button onClick={onButtonClick}>
