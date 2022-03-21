@@ -108,6 +108,7 @@
 
 @media (max-width: 767px) {
   .homepage-banner {
+    padding: var(--20) var(--20) var(--125);
     flex-direction: column;
     margin-top: var(--30);
     .homepage-banner-title {
@@ -118,8 +119,13 @@
       -webkit-text-stroke: 0.5px var(--grayBorder);
     }
     .homepage-banner-right {
-      .logo-development img {
-        width: 85%;
+      flex-wrap: wrap;
+      justify-content: center;
+      .logo-development {
+        width: 50%;
+        img {
+          width: 85%;
+        }
       }
     }
   }
