@@ -5,6 +5,7 @@ import Button from "../components/Button"
 import CaseStudy from "../components/Case-Studies/Case-studies"
 import Footer from "../components/Footer/Footer"
 import { StaticImage } from "gatsby-plugin-image"
+import SEO from "../components/Seo"
 
 const IndexPage = () => {
   const DevelopmentLogos = () => {
@@ -33,6 +34,7 @@ const IndexPage = () => {
   }
   return (
     <>
+      <SEO />
       <Header />
       <section className={`homepage-banner text-center cd-section visible`}>
         <div className={`homepage-banner-left flex flex-col items-center `}>
@@ -43,9 +45,9 @@ const IndexPage = () => {
             E-commerce Website Developer in Mumbai
           </h1>
           <p className={`homepage-banner-subtitle`}>
-            WordPress, Shopify e-commerce website development that keenly
-            focuses on blazing-fast sites which in turn is responsible for
-            generating sales.
+            WordPress, Shopify or Headless E-commerce website development that
+            keenly focuses on blazing-fast sites which in turn is responsible
+            for generating sales.
           </p>
           <Button link="mailto:raj@inventtheweb.com" name={`Hire me`} />
         </div>
