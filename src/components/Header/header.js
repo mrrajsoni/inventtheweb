@@ -1,6 +1,6 @@
 import * as React from "react"
 import Menu from "./Menu/menu"
-import logo from "../../images/Inventtheweb-logo-black.webp"
+import logo from "../../images/InventTheWeb.png"
 
 const Header = () => {
   return (
