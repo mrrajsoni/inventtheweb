@@ -1,9 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: `A freelance Frontend Developer from Mumbai`,
+    title: `WordPress, Shopify, Gatsby E-commerce Website Developer in Mumbai`,
     description: `A superfast E-commerce development that generate the sales.`,
     author: `Raj Soni`,
     siteUrl: `https://inventtheweb.com`,
+    image: "/src/images/Inventtheweb-logo-black.webp",
+    keywords:
+      "ecommerce developer mumbai, freelance wordpress developer mumbai, freelance website developer",
     menuLinks: [
       {
         name: "Projects",
