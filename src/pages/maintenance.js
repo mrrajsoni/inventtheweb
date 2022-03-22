@@ -7,7 +7,7 @@ const Maintenance = () => {
       <div>
         <StaticImage
           width={200}
-          src="../images/Inventtheweb-logo-black.webp"
+          src="../images/InventTheWeb.png"
           alt="invent-the-web-logo"
         />
       </div>
