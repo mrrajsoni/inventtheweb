@@ -1,3 +1,4 @@
+const mainSiteUrl = process.env.URL || `https://inventtheweb.com`
 module.exports = {
   siteMetadata: {
     title: `WordPress, Shopify, Gatsby E-commerce Website Developer in Mumbai`,
@@ -29,6 +30,41 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: "gatsby-plugin-sitemap",
+      options: {
+        query: `
+        {
+          site {
+            siteMetadata {
+              siteUrl
+            }
+          }
+          allSitePage {
+            nodes {
+              path
+            }
+          }
+        }
+      `,
+        resolveSiteUrl: () => mainSiteUrl,
+        resolvePages: ({ allSitePage: { nodes: AllPages } }) => {
+          const pages = AllPages.map(page => {
+            return { ...page }
+          })
+
+          return pages
+        },
+        serialize: ({ path }) => {
+          let entry = {
+            url: path,
+            changefreq: "daily",
+            priority: 0.5,
+          }
+          return entry
+        },
+      },
+    },
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -37,9 +73,21 @@ module.exports = {
         path: `${__dirname}/casestudies`,
       },
     },
-    `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-transformer-sharp`,
+      options: {
+        checkSupportedExtensions: false,
+      },
+    },
     `gatsby-plugin-sharp`,
     `gatsby-plugin-mdx`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: "images",
+        path: `${__dirname}/src/images`,
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
