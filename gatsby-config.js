@@ -30,36 +30,6 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    {
-      resolve: `gatsby-plugin-sitemap`,
-      options: {
-        query: `
-        {
-          allSitePage {
-            nodes {
-              path
-            }
-          }
-        }
-      `,
-        resolveSiteUrl: () => mainSiteUrl,
-        resolvePages: ({ allSitePage: { nodes: AllPages } }) => {
-          const pages = AllPages.map(page => {
-            return { ...page }
-          })
-
-          return pages
-        },
-        serialize: ({ path }) => {
-          let entry = {
-            url: path,
-            changefreq: "daily",
-            priority: 0.5,
-          }
-          return entry
-        },
-      },
-    },
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -92,6 +62,36 @@ module.exports = {
         background_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/images/ITW-favicon.png`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        query: `
+        {
+          allSitePage {
+            nodes {
+              path
+            }
+          }
+        }
+      `,
+        resolveSiteUrl: () => mainSiteUrl,
+        resolvePages: ({ allSitePage: { nodes: AllPages } }) => {
+          const pages = AllPages.map(page => {
+            return { ...page }
+          })
+
+          return pages
+        },
+        serialize: ({ path }) => {
+          let entry = {
+            url: path,
+            changefreq: "daily",
+            priority: 0.5,
+          }
+          return entry
+        },
       },
     },
     {
