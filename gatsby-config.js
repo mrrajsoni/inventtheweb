@@ -31,7 +31,7 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
-      resolve: "gatsby-plugin-sitemap",
+      resolve: `gatsby-plugin-sitemap`,
       options: {
         query: `
         {
