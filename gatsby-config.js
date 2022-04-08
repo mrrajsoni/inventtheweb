@@ -1,4 +1,3 @@
-const mainSiteUrl = process.env.URL || `https://inventtheweb.com`
 module.exports = {
   siteMetadata: {
     title: `WordPress, Shopify, Gatsby E-commerce Website Developer in Mumbai`,
@@ -64,36 +63,7 @@ module.exports = {
         icon: `src/images/ITW-favicon.png`, // This path is relative to the root of the site.
       },
     },
-    {
-      resolve: `gatsby-plugin-sitemap`,
-      options: {
-        query: `
-        {
-          allSitePage {
-            nodes {
-              path
-            }
-          }
-        }
-      `,
-        resolveSiteUrl: () => mainSiteUrl,
-        resolvePages: ({ allSitePage: { nodes: AllPages } }) => {
-          const pages = AllPages.map(page => {
-            return { ...page }
-          })
-
-          return pages
-        },
-        serialize: ({ path }) => {
-          let entry = {
-            url: path,
-            changefreq: "daily",
-            priority: 0.5,
-          }
-          return entry
-        },
-      },
-    },
+    `gatsby-plugin-sitemap`,
     {
       resolve: "gatsby-plugin-react-svg",
       options: {
