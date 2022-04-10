@@ -377,7 +377,7 @@ a {
 }
 
 button {
-  background: #000;
+  background: var(--black);
   border-radius: var(--50);
   margin-top: var(--30);
 
@@ -387,7 +387,7 @@ button {
     border-radius: var(--50);
     color: var(--white);
     font-size: 22px;
-    background: var(--primaryBlue);
+    background: var(--primaryPurple);
     transform: translate(-4px, -4px);
     -webkit-transform: translate(-4px, -4px);
     -moz-transform: translate(-4px, -4px);
@@ -429,6 +429,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
+  background-color: var(--primaryGray);
 }
 
 .logo {
