@@ -31,7 +31,8 @@ const CaseStudy = () => {
   }
   React.useEffect(() => {
     window.addEventListener('scroll', () => {
-      createObserver();
+      if (window.innerWidth > 1200)
+        createObserver();
     }, true)
   }, [])
 

@@ -57,29 +57,6 @@
   padding: var(--padding);
 }
 
-.case-study-container {
-  display: flex;
-  transition: all 350ms ease-in-out;
-  -webkit-transition: all 350ms ease-in-out;
-  -moz-transition: all 350ms ease-in-out;
-  -ms-transition: all 350ms ease-in-out;
-  -o-transition: all 350ms ease-in-out;
-  transform: scale(0.8);
-  -webkit-transform: scale(0.8);
-  -moz-transform: scale(0.8);
-  -ms-transform: scale(0.8);
-  -o-transform: scale(0.8);
-
-  &.isHighlighted {
-    box-shadow: 0 30px 60px rgb(0 0 0 / 21%);
-    transform: scale(1);
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    -o-transform: scale(1);
-  }
-}
-
 .case-study-container:not(:last-child) {
   margin-bottom: var(--100);
 }
@@ -124,14 +101,43 @@
   margin-right: 10px;
 }
 
-/** Tab styling **/
+/** Case study animation styling **/
 
-@media (max-width: 1023px) and (min-width: 768px) {
+@media (min-width: 1200px){
+  .case-study-container {
+    transition: all 350ms ease-in-out;
+    -webkit-transition: all 350ms ease-in-out;
+    -moz-transition: all 350ms ease-in-out;
+    -ms-transition: all 350ms ease-in-out;
+    -o-transition: all 350ms ease-in-out;
+    transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    -o-transform: scale(0.8);
+
+    &.isHighlighted {
+      box-shadow: 0 30px 60px rgb(0 0 0 / 21%);
+      transform: scale(1);
+      -webkit-transform: scale(1);
+      -moz-transform: scale(1);
+      -ms-transform: scale(1);
+      -o-transform: scale(1);
+    }
+}
+}
+
+@media (max-width: 1199px){
+  .case-study-container {
+    box-shadow: 0 30px 60px rgb(0 0 0 / 21%);
+    
+  }
 }
 
 /** Mobile styling **/
 
 @media (max-width: 767px) {
+  .homepage-banner-container {
   .homepage-banner {
     padding: var(--20) var(--20) var(--125);
     flex-direction: column;
@@ -140,7 +146,7 @@
     }
 
     .homepage-banner-title:after {
-      -webkit-text-stroke: 0.5px var(--grayBorder);
+      -webkit-text-stroke: 0.5px var(--primaryBlack);
     }
     .homepage-banner-right {
       flex-wrap: wrap;
@@ -153,6 +159,7 @@
       }
     }
   }
+}
 
   .case-study-container {
     flex-direction: column;
