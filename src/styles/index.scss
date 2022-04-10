@@ -1,51 +1,58 @@
 @import url("../styles/variables.scss");
 
 // Homepage banner section start
-.homepage-banner {
-  max-width: var(--maxWidth);
-  margin: auto;
-  padding: var(--50) var(--20) var(--125);
+.homepage-banner-container{
+  background-color: var(--primaryGray);
+  position: relative;
+  z-index: 0;
 
-  .homepage-banner-title {
-    font-family: "Nibpro-bold";
-    font-size: 75px;
-    position: relative;
-  }
-
-  .homepage-banner-title:after {
-    content: attr(title);
-    color: transparent;
-    -webkit-text-stroke: 1px var(--grayBorder);
-    position: absolute;
-    left: 0;
-    top: 0;
-    vertical-align: middle;
-    z-index: -1;
-    transform: translate(2px, 2px);
-    backface-visibility: hidden;
-    -webkit-transform: translate(2px, 2px);
-    -moz-transform: translate(2px, 2px);
-    -ms-transform: translate(2px, 2px);
-    -o-transform: translate(2px, 2px);
-  }
-
-  .homepage-banner-subtitle {
-    font-size: 22px;
-  }
-
-  .homepage-banner-right {
-    border: 2px dashed var(--secondaryYellow);
-    .logo-development img {
-      width: 75%;
-      margin: auto;
+  .homepage-banner {
+    max-width: var(--maxWidth);
+    margin: auto;
+    padding: var(--50) var(--20) var(--125);
+    
+  
+    .homepage-banner-title {
+      font-family: "Nibpro-bold";
+      font-size: 75px;
+      position: relative;
+    }
+  
+    .homepage-banner-title:after {
+      content: attr(title);
+      color: transparent;
+      -webkit-text-stroke: 1px var(--primaryBlack);
+      position: absolute;
+      left: 0;
+      top: 0;
+      vertical-align: middle;
+      z-index: -1;
+      transform: translate(2px, 2px);
+      backface-visibility: hidden;
+      -webkit-transform: translate(2px, 2px);
+      -moz-transform: translate(2px, 2px);
+      -ms-transform: translate(2px, 2px);
+      -o-transform: translate(2px, 2px);
+    }
+  
+    .homepage-banner-subtitle {
+      font-size: 22px;
+    }
+  
+    .homepage-banner-right {
+      border: 2px dashed var(--primaryBlack);
+      .logo-development img {
+        width: 75%;
+        margin: auto;
+      }
     }
   }
 }
 
+
 // Case studies start
 
 .case-study {
-  background-color: var(--lightYellowBg);
   text-align: center;
   padding: var(--padding);
 }
@@ -113,7 +120,7 @@
   display: inline-block;
   width: 20px;
   height: 2px;
-  border-bottom: 2px dashed var(--secondaryYellow);
+  border-bottom: 2px dashed var(--primaryBlack);
   margin-right: 10px;
 }
 

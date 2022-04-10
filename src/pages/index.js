@@ -36,23 +36,25 @@ const IndexPage = () => {
     <>
       <SEO />
       <Header />
-      <section className={`homepage-banner text-center cd-section visible`}>
-        <div className={`homepage-banner-left flex flex-col items-center `}>
-          <h1
-            title="E-commerce Website Developer in Mumbai"
-            className={`homepage-banner-title`}
-          >
-            E-commerce Website Developer in Mumbai
-          </h1>
-          <p className={`homepage-banner-subtitle`}>
-            WordPress, Shopify or Headless E-commerce website development that
-            keenly focuses on blazing-fast sites which in turn is responsible
-            for generating sales.
-          </p>
-          <Button link="mailto:raj@inventtheweb.com" name={`Hire me`} />
-        </div>
-        <div className={`homepage-banner-right flex mt-10 `}>
-          <DevelopmentLogos />
+      <section className="homepage-banner-container">
+        <div className={`homepage-banner text-center cd-section visible`}>
+          <div className={`homepage-banner-left flex flex-col items-center `}>
+            <h1
+              title="E-commerce Website Developer in Mumbai"
+              className={`homepage-banner-title`}
+            >
+              E-commerce Website Developer in Mumbai
+            </h1>
+            <p className={`homepage-banner-subtitle`}>
+              WordPress, Shopify or Headless E-commerce website development that
+              keenly focuses on blazing-fast sites which in turn is responsible
+              for generating sales.
+            </p>
+            <Button link="mailto:raj@inventtheweb.com" name={`Hire me`} />
+          </div>
+          <div className={`homepage-banner-right flex mt-10 `}>
+            <DevelopmentLogos />
+          </div>
         </div>
       </section>
       <section className={`case-study cd-section`}>
